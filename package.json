@@ -9,7 +9,11 @@
   "author": "leeqiang",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mongoose": "^5.7.11",
     "nodemailer": "^6.3.1"
   }
 }
