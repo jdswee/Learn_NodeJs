@@ -1,0 +1,7 @@
+{
+  "name": "User API",
+  "version": "0.1.0",
+  "description": "apiDoc basic example",
+  "title": "用户登录接口",
+  "url" : "http://120.0.0.1:3000"
+}

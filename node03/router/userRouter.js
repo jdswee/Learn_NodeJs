@@ -5,6 +5,17 @@ const mailVerification = require('../utils/mail')
 // 邮箱验证码
 let verificationCode = {}
 // 注册
+/**  
+ * @api {post} /user/register 用户注册
+ * @apiName 用户注册
+ * @apiGroup User
+ *
+ * @apiParam {String} username 用户名
+ * @apiParam {String} password 密码
+ * @apiParam {String} code 验证码
+ * 
+ * @apiSuccess {Number} status 状态码.
+ */
 router.post('/register', (req, res) => {
   let { username, password, code } = req.body
   if ( username && password&& code ) {
