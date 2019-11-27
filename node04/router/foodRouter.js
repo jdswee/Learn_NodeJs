@@ -74,4 +74,16 @@ router.post('/update', (req, res) => {
     res.send({status: 0, msg: 'fail'})
   })
 })
+// 分页查询
+router.post('/getInfoByPage', (req, res) => {
+  let pageSize = Number(req.body.pageSize) || 2
+  let page = Number(req.body.page) || 1
+
+  foodModule.find().limit(pageSize).skip((page-1)*pageSize).then((data) => {
+    res.send({status: 1, msg: 'success', list: data})
+  }).catch((err) => {
+    res.send({status: 0, msg: 'fail', err})
+  })
+})
+
 module.exports = router
